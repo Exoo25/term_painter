@@ -1,4 +1,4 @@
-# ⏳Term Painter
+# ⏳Term Painter The Gradient Lib
 
 A lightweight Python library to print beautiful **gradient-colored text** in your terminal. Perfect for making your CLI output colorful and stylish with smooth color transitions!. It is usefull in interactive console applications
 > **The best thing is that it support aniamted gradient text even cholroma hasn't**
@@ -48,6 +48,7 @@ pip install .
  >⚠️ **Important:**  
  >For best results, use terminals that support 24-bit (true color).
  >Some terminals may show approximate colors if true color is not supported.
+
 
 
 
