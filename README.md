@@ -25,6 +25,11 @@ print(gradeint.gradient("Hello World", "#ff0000", "#0D00FF")) #gradient
 rainbow.rainbow("This is cool!", speed=0.1)  # Animated
 ```
 
+https://github.com/user-attachments/assets/0d8c9e7e-3649-4447-8f75-503f43e70ffe
+
+
+
+
 
 
 ---
@@ -42,5 +47,6 @@ pip install .
  >⚠️ **Important:**  
  >For best results, use terminals that support 24-bit (true color).
  >Some terminals may show approximate colors if true color is not supported.
+
 
 
