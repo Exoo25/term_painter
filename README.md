@@ -49,6 +49,12 @@ pip install .
  >For best results, use terminals that support 24-bit (true color).
  >Some terminals may show approximate colors if true color is not supported.
 
+--- 
+
+## Change Logs
+> - [09/08/2025 2:47PM] Added constants for styles,colors and bg_colors `escape`
+> - 
+
 
 
 
