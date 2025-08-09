@@ -52,8 +52,9 @@ pip install .
 --- 
 
 ## Change Logs
-> - [09/08/2025 2:47PM] Added constants for styles,colors and bg_colors more info(more info)[https://github.com/Exoo25/term_painter/commit/b36b5813f4e4e567b3037d88da2101f852765bcc]
+> - [09/08/2025 2:47PM] Added constants for styles,colors and bg_colors more info[more info](https://github.com/Exoo25/term_painter/commit/b36b5813f4e4e567b3037d88da2101f852765bcc)
 > - 
+
 
 
 
