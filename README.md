@@ -22,7 +22,7 @@ A lightweight Python library to print beautiful **gradient-colored text** in you
 from term_painter import gradeint,rainbow
 
 print(gradeint.gradient("Hello World", "#ff0000", "#0D00FF")) #gradient
-rainbow.rainbow("This is cool!", speed=0.1)  # Animated
+rainbow("This is cool!", speed=0.1)  # Animated
 ```
 ![20250809_001501](https://github.com/user-attachments/assets/9ebd71da-fcd9-48e8-8c46-f4713eb9931c)
 
@@ -48,6 +48,7 @@ pip install .
  >⚠️ **Important:**  
  >For best results, use terminals that support 24-bit (true color).
  >Some terminals may show approximate colors if true color is not supported.
+
 
 
 
