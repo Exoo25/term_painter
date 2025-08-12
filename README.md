@@ -38,9 +38,8 @@ rainbow("This is cool!", speed=0.1)  # Animated
 ## 📦 Installation
 
 ```bash
+cd your-project-path
 git clone https://github.com/Exoo25/term_painter/
-cd term_painter
-mv ~/term_painter $(python -c "import site; print(site.getsitepackages()[0])")/
 
 ```
 ---
@@ -54,6 +53,7 @@ mv ~/term_painter $(python -c "import site; print(site.getsitepackages()[0])")/
 ## Change Logs
 > - [09/08/2025 2:47PM] Added constants for styles & colors [more info](https://github.com/Exoo25/term_painter/commit/b36b5813f4e4e567b3037d88da2101f852765bcc)
 > - 
+
 
 
 
