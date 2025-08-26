@@ -1,6 +1,11 @@
 from .color_utils import *
 from .gradeint import *
 from .rainbow import *
+from pyfiglet import *
+import sys
+import os
+import msvcrt
+import curses 
 # Reset
 RESET = "\x1b[0m"
 
@@ -58,3 +63,47 @@ def color_text(text: str, *styles):
         color_text("Hello", BRIGHT_RED, BOLD)
     """
     return "".join(styles) + text + RESET
+def heading(text: str, font: str, *styles : tuple):
+    """
+    Create a heading using pyfiglet and colorize it.
+    Example:
+        heading("Hello", "slant", BRIGHT_BLUE, BOLD)
+    """
+    figlet_text = figlet_format(text, font=font)
+    print(color_text(figlet_text, *styles))
+def button(text: str, *styles: tuple, function=None, bg_color=BLACK):
+    """
+    Create a clickable button in the terminal with text and background color.
+    Example:
+        button("Click Me", BRIGHT_GREEN, BOLD, function=lambda: print("Button Pressed!"), bg_color=BG_BLACK)
+    """
+    def draw_button(selected=False):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if selected:
+            # Highlight selection with REVERSE
+            print(color_text(f" {text} ", *styles, bg_color, REVERSE))
+        else:
+            print(color_text(f" {text} ", *styles, bg_color))
+
+    selected = False
+    draw_button(selected)
+
+    while True:
+        key = msvcrt.getch()
+        if key == b'\r':  # Enter key
+            if function:
+                function()
+            break
+        elif key in (b'\x1b', b'q'):  # Esc or 'q' to quit
+            break
+        elif key == b'\t':  # Tab key to toggle selection
+            selected = not selected
+            draw_button(selected)
+def entry(prompt: str, *styles: tuple, bg_color=BG_WHITE):
+    """
+    Create a styled input prompt in the terminal.
+    Example:
+        name = entry("Enter your name: ", BRIGHT_CYAN, BOLD, bg_color=BG_BLACK)
+    """
+    styled_prompt = color_text(prompt, *styles, bg_color)
+    return input(styled_prompt)
